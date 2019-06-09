@@ -510,6 +510,19 @@ class Config extends AbstractHelper
     }
 
     /**
+     * Get default attribute-set id for given entity
+     *
+     * @param $entity
+     *
+     * @return int
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function getDefaultAttributeSetId($entity)
+    {
+        return $this->eavConfig->getEntityType($entity)->getDefaultAttributeSetId();
+    }
+
+    /**
      * Retrieve attribute by code
      *
      * @param string $entityType
